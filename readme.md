@@ -6,7 +6,7 @@ If you're like me, or like most of us, we've got you covered!
 
 ## Template Directory Structure
 
-```
+```php
 .
 ├── app
 ├── bootstrap
