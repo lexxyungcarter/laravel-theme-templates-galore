@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->share([
-            'site_name' => 'Laravel Themes Galore'
+            'site_name' => 'AceLords Themes Galore'
         ]);
     }
 

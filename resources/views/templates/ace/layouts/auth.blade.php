@@ -8,6 +8,9 @@
 		<meta name="description" content="overview &amp; stats" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
+		{{--  seo  --}}
+		@include('layouts.partials.seo-header')
+		
 		<!-- bootstrap & fontawesome -->
 		{{ Html::style('/templates/ace/assets/css/bootstrap.min.css') }}
 		{{ Html::style('/templates/ace/assets/font-awesome/4.5.0/css/font-awesome.min.css') }}
@@ -61,6 +64,9 @@
 			if('ontouchstart' in document.documentElement) document.write("<script src='/templates/ace/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
 		{{ Html::script('/templates/ace/assets/js/bootstrap.min.js') }}
+
+		{{--  seo  --}}
+        @include('layouts.partials.tracking')
 
         {{--  yield additional scripts  --}}
         @yield('scripts')

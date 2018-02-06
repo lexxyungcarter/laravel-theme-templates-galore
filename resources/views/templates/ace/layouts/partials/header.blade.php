@@ -11,7 +11,7 @@
         </button>
 
         <div class="navbar-header pull-left">
-            <a href="{{ route('pages.show', ['ace', 'index']) }}" class="navbar-brand">
+            <a href="{{ url('/') }}" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
                     {{ $site_name }}

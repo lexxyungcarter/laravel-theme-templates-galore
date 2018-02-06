@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use SEO;
 
 class HomeController extends Controller
 {
@@ -37,6 +38,15 @@ class HomeController extends Controller
             }
         }
 
+        // set SEO
+        SEO::setTitle('Full Laravel Blade Templates ported from static HTML5 templates | AceLords Themes Galore');
+        SEO::setDescription('Speed up your development by grabbing one of our blade-ready templates ported just for you!');
+        SEO::opengraph()->setUrl(request()->root());
+        SEO::setCanonical(request()->root());
+        SEO::opengraph()->addProperty('type', 'page');
+        SEO::opengraph()->addProperty('image', request()->root() . '/img/screenshot.jpg');
+        // SEO::twitter()->setSite('@acelords');
+
         return view('welcome')
         ->with([
             'title' => 'Laravel Themes Galore',
@@ -55,6 +65,16 @@ class HomeController extends Controller
     {
         $view = 'templates.' . $theme . '.' . $page;
 
+        // set SEO
+        SEO::setTitle('Full Laravel Blade Template for the ' . ucwords($theme) . ' HTML5 Theme | AceLords Themes Galore');
+        SEO::setDescription('Speed up your development by grabbing this ' . ucwords($theme) . ' Blade Template converted just for you!');
+        SEO::opengraph()->setUrl(request()->url());
+        SEO::setCanonical(request()->url());
+        SEO::opengraph()->addProperty('type', 'page');
+        SEO::opengraph()->addProperty('image', request()->root() . '/templates/' . $theme . '/screenshot.jpg');
+        // SEO::twitter()->setSite('@acelords');
+
+        
         return view($view)
         ->with([
             'theme' => $theme,

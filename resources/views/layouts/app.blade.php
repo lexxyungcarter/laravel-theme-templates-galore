@@ -12,6 +12,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    {{--  seo  --}}
+    @include('layouts.partials.seo-header')
+    
 </head>
 <body>
     <div id="app">

@@ -8,6 +8,9 @@
 		<meta name="description" content="overview &amp; stats" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
+		{{--  seo  --}}
+		@include('layouts.partials.seo-header')
+		
 		{{--  header styles + scripts  --}}
 		<!-- bootstrap & fontawesome -->
 		{{ Html::style('/templates/ace/assets/css/bootstrap.min.css') }}
@@ -44,8 +47,7 @@
 		<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
 
-		{{--  custom style  --}}
-		{{ Html::style('/templates/ace/assets/css/custom.css') }}
+		{{--  custom style goes here --}}
 
         {{--  yield additional styles  --}}
         @yield('styles')
@@ -110,6 +112,9 @@
 		<!-- ace scripts -->
 		{{ Html::script('/templates/ace/assets/js/ace-elements.min.js') }}
 		{{ Html::script('/templates/ace/assets/js/ace.min.js') }}
+
+		{{--  seo  --}}
+        @include('layouts.partials.tracking')
 
 		<!-- inline scripts related to this page -->
         {{--  yield additional scripts  --}}
