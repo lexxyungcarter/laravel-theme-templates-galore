@@ -5,7 +5,6 @@
 		<meta charset="utf-8" />
 		<title>{{ isset($title) ? $title : '' }} | {{ $site_name }}</title>
 
-		<meta name="description" content="overview &amp; stats" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 		{{--  seo  --}}
